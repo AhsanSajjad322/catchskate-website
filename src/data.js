@@ -10,7 +10,7 @@ export const appInfo = {
   name: "Catch Skate",
   tagline: "The phone is the skateboard.",
   shortDescription:
-    "Flip it, catch it, land the trick. Catch Skate turns your phone into a skateboard using the gyroscope in your pocket — then lets you run games of SKATE with your friends.",
+    "Flip it, catch it, land the trick. Catch Skate uses a model trained on flipped data to predict your tricks — then lets you run games of SKATE with your friends.",
 };
 
 // Replace "#" with your live App Store / Google Play links once published.
@@ -37,8 +37,10 @@ export const videos = [
     id: "skate-instructions",
     title: "SKATE — Detailed Instructions",
     description: "The full rundown of how a game of SKATE is played.",
-    // TODO: replace with the SKATE detailed-instructions YouTube link.
-    youtubeUrl: "https://youtu.be/YYkSsRmHPTA",
+    // No link yet — shows a "Coming soon" placeholder until this is set.
+    // Once you have the real video, just paste the link here, e.g.
+    // youtubeUrl: "https://youtu.be/XXXXXXXXXXX",
+    youtubeUrl: null,
   },
 ];
 

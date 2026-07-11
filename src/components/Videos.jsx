@@ -1,7 +1,7 @@
 import { videos, getYouTubeId } from "../data.js";
 
 function VideoCard({ video }) {
-  const youtubeId = getYouTubeId(video.youtubeUrl);
+  const youtubeId = video.youtubeUrl ? getYouTubeId(video.youtubeUrl) : null;
 
   return (
     <article className="video-card">
@@ -16,9 +16,10 @@ function VideoCard({ video }) {
             loading="lazy"
           />
         ) : (
-          <a href={video.youtubeUrl} target="_blank" rel="noreferrer">
-            Watch on YouTube
-          </a>
+          <div className="video-card__placeholder">
+            <img src="/logo.png" alt="" className="video-card__placeholder-logo" />
+            <span>Coming soon</span>
+          </div>
         )}
       </div>
       <h3 className="video-card__title">{video.title}</h3>
@@ -66,14 +67,26 @@ export default function Videos() {
           width: 100%;
           height: 100%;
         }
-        .video-card__frame a {
+        .video-card__placeholder {
           position: absolute;
           inset: 0;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          font-weight: 700;
-          color: var(--caution);
+          gap: 12px;
+        }
+        .video-card__placeholder-logo {
+          height: 44px;
+          width: auto;
+          opacity: 0.5;
+        }
+        .video-card__placeholder span {
+          font-family: 'Anton', sans-serif;
+          font-size: 13px;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--chalk-faint);
         }
         .video-card__title {
           font-size: 17px;

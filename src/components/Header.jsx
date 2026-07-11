@@ -11,7 +11,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header__inner">
         <a href="#top" className="site-header__logo">
-          <img src="/logo.png" alt="" width="32" height="32" />
+          <img src="/logo.png" alt="" className="site-header__logo-img" />
           <span>{appInfo.name}</span>
         </a>
 
@@ -58,8 +58,9 @@ export default function Header() {
           letter-spacing: 0.02em;
           flex-shrink: 0;
         }
-        .site-header__logo img {
-          border-radius: 8px;
+        .site-header__logo-img {
+          height: 36px;
+          width: auto;
         }
         .site-header__nav {
           display: flex;

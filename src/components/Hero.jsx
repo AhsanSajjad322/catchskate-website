@@ -27,7 +27,6 @@ export default function Hero() {
         </div>
 
         <div className="hero__visual">
-          <img src="/logo.png" alt="Catch Skate app icon" className="hero__logo" />
           <TrickCompass />
         </div>
       </div>
@@ -75,12 +74,6 @@ export default function Hero() {
           flex-direction: column;
           align-items: center;
           gap: 24px;
-        }
-        .hero__logo {
-          width: 120px;
-          height: 120px;
-          border-radius: 28px;
-          box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
         @media (max-width: 860px) {
           .hero__inner {

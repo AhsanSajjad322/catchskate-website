@@ -5,62 +5,62 @@ export default function TrickCompass() {
     <svg
       viewBox="0 0 360 460"
       role="img"
-      aria-label="Diagram of a phone showing the nose at the top and the rails on the left and right sides, with arrows indicating spin and flip motions"
+      aria-label="Diagram of a phone showing the nose at the top and the rails on the left and right sides"
       className="trick-compass"
     >
       <defs>
-        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-          <path d="M0,0 L8,4 L0,8 Z" fill="var(--caution)" />
-        </marker>
+        <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="4.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+        <radialGradient id="glowYellow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="var(--caution)" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="var(--caution)" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#2ce5dc" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#2ce5dc" stopOpacity="0" />
+        </radialGradient>
       </defs>
 
-      {/* phone body */}
+      {/* phone body — corners stay a plain, neutral grey */}
       <rect x="110" y="70" width="140" height="300" rx="26" fill="var(--asphalt-2)" stroke="var(--line)" strokeWidth="2" />
       <circle cx="180" cy="98" r="4" fill="var(--chalk-faint)" />
       <rect x="150" y="340" width="60" height="6" rx="3" fill="var(--chalk-faint)" />
 
-      {/* nose spin arrow */}
-      <path
-        d="M 130 40 A 60 60 0 0 1 230 40"
-        fill="none"
-        stroke="var(--caution)"
-        strokeWidth="3"
-        markerEnd="url(#arrowhead)"
-      />
-      <text x="180" y="22" textAnchor="middle" fill="var(--chalk)" fontFamily="Anton, sans-serif" fontSize="15" letterSpacing="1">
+      {/* nose — soft yellow glow fading into the grey phone body */}
+      <ellipse cx="180" cy="112" rx="58" ry="34" fill="url(#glowYellow)" />
+      <text
+        x="180"
+        y="120"
+        textAnchor="middle"
+        fill="var(--caution)"
+        fontFamily="Anton, sans-serif"
+        fontSize="20"
+        letterSpacing="2"
+        filter="url(#glow)"
+      >
         NOSE
       </text>
-      <text x="180" y="428" textAnchor="middle" fill="var(--chalk-faint)" fontFamily="Inter, sans-serif" fontSize="12">
-        spins clockwise or counterclockwise
-      </text>
 
-      {/* left rail flip arrow */}
-      <path
-        d="M 70 260 L 70 180"
-        fill="none"
-        stroke="var(--hazard-red)"
-        strokeWidth="3"
-        markerEnd="url(#arrowhead)"
-      />
-      <text x="70" y="150" textAnchor="middle" fill="var(--chalk)" fontFamily="Anton, sans-serif" fontSize="13">
+      {/* left rail — soft teal glow */}
+      <ellipse cx="70" cy="158" rx="46" ry="36" fill="url(#glowTeal)" />
+      <text x="70" y="152" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="15" filter="url(#glow)">
         LEFT
       </text>
-      <text x="70" y="166" textAnchor="middle" fill="var(--chalk)" fontFamily="Anton, sans-serif" fontSize="13">
+      <text x="70" y="172" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="15" filter="url(#glow)">
         RAIL
       </text>
 
-      {/* right rail flip arrow */}
-      <path
-        d="M 290 180 L 290 260"
-        fill="none"
-        stroke="var(--hazard-red)"
-        strokeWidth="3"
-        markerEnd="url(#arrowhead)"
-      />
-      <text x="290" y="294" textAnchor="middle" fill="var(--chalk)" fontFamily="Anton, sans-serif" fontSize="13">
+      {/* right rail — soft teal glow */}
+      <ellipse cx="290" cy="302" rx="46" ry="36" fill="url(#glowTeal)" />
+      <text x="290" y="296" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="15" filter="url(#glow)">
         RIGHT
       </text>
-      <text x="290" y="310" textAnchor="middle" fill="var(--chalk)" fontFamily="Anton, sans-serif" fontSize="13">
+      <text x="290" y="316" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="15" filter="url(#glow)">
         RAIL
       </text>
 

@@ -5,15 +5,15 @@ const steps = [
   },
   {
     title: "Spin and flip",
-    body: "Land a trick by spinning the nose clockwise or counterclockwise, flipping the left rail up, or flipping the right rail up — or by combining them.",
+    body: "Pop a trick by spinning the nose clockwise or counterclockwise, flipping the left rail up, or flipping the right rail up — or by combining them.",
   },
   {
-    title: "Tracked by gyroscope",
-    body: "Catch Skate reads your phone's built-in gyroscope to detect exactly which trick you landed, in real time.",
+    title: "Land",
+    body: "Control your descent and hold the trick for 1s to confirm you landed. Land clean, no bobbles here!",
   },
   {
     title: "Play SKATE with friends",
-    body: "Borrowed straight from basketball's HORSE: one player sets a trick, the next player has to land it. Miss it, take a letter. Spell SKATE, you're out.",
+    body: "One player sets a trick, the next player has to land it. Miss it, take a letter. Spell SKATE, you're out. Check the leaderboard to see if your skills top the charts.",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function HowItWorks() {
         <span className="eyebrow">How it works</span>
         <h2 className="section-heading">Your phone already knows how to skate.</h2>
         <p className="section-lede">
-          Catch Skate turns everyday phone-flipping into a full trick system — no board, no bruises, no drained battery on repeat drops.
+          Catch Skate turns everyday phone-flipping into a full trick system — no board, no bruises. Every trick can be described by their motion.
         </p>
 
         <ol className="how-it-works__grid">
