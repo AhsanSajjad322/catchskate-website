@@ -12,19 +12,19 @@ export default function TrickCompass() {
     >
       <defs>
         <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-          <feGaussianBlur stdDeviation="4.5" result="blur" />
+          <feGaussianBlur stdDeviation="2.5" result="blur" />
           <feMerge>
             <feMergeNode in="blur" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
-        <radialGradient id="glowYellow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="var(--caution)" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="var(--caution)" stopOpacity="0" />
-        </radialGradient>
         <radialGradient id="glowTeal" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#2ce5dc" stopOpacity="0.55" />
+          <stop offset="0%" stopColor="#2ce5dc" stopOpacity="0.32" />
           <stop offset="100%" stopColor="#2ce5dc" stopOpacity="0" />
+        </radialGradient>
+        <radialGradient id="glowYellow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="var(--caution)" stopOpacity="0.32" />
+          <stop offset="100%" stopColor="var(--caution)" stopOpacity="0" />
         </radialGradient>
         {/* Clips every glow to the phone's rounded silhouette so color
             never spills past the edge, and fades out before the corners. */}
@@ -38,9 +38,9 @@ export default function TrickCompass() {
 
       {/* glows — clipped to the phone shape, corners stay plain grey */}
       <g clipPath="url(#phoneClip)">
-        <ellipse cx="180" cy="104" rx="80" ry="40" fill="url(#glowYellow)" />
-        <ellipse cx="143" cy="220" rx="42" ry="95" fill="url(#glowTeal)" />
-        <ellipse cx="217" cy="220" rx="42" ry="95" fill="url(#glowTeal)" />
+        <ellipse cx="180" cy="104" rx="60" ry="32" fill="url(#glowTeal)" />
+        <ellipse cx="143" cy="222" rx="34" ry="84" fill="url(#glowYellow)" />
+        <ellipse cx="217" cy="222" rx="34" ry="84" fill="url(#glowYellow)" />
       </g>
 
       <circle cx="180" cy="98" r="4" fill="var(--chalk-faint)" />
@@ -51,7 +51,7 @@ export default function TrickCompass() {
         x="180"
         y="112"
         textAnchor="middle"
-        fill="var(--caution)"
+        fill="#2ce5dc"
         fontFamily="Anton, sans-serif"
         fontSize="19"
         letterSpacing="2"
@@ -61,18 +61,18 @@ export default function TrickCompass() {
       </text>
 
       {/* left rail label */}
-      <text x="143" y="214" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="13" filter="url(#glow)">
+      <text x="143" y="212" textAnchor="middle" fill="var(--caution)" fontFamily="Anton, sans-serif" fontSize="16" filter="url(#glow)">
         LEFT
       </text>
-      <text x="143" y="230" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="13" filter="url(#glow)">
+      <text x="143" y="232" textAnchor="middle" fill="var(--caution)" fontFamily="Anton, sans-serif" fontSize="16" filter="url(#glow)">
         RAIL
       </text>
 
       {/* right rail label */}
-      <text x="217" y="214" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="13" filter="url(#glow)">
+      <text x="217" y="212" textAnchor="middle" fill="var(--caution)" fontFamily="Anton, sans-serif" fontSize="16" filter="url(#glow)">
         RIGHT
       </text>
-      <text x="217" y="230" textAnchor="middle" fill="#2ce5dc" fontFamily="Anton, sans-serif" fontSize="13" filter="url(#glow)">
+      <text x="217" y="232" textAnchor="middle" fill="var(--caution)" fontFamily="Anton, sans-serif" fontSize="16" filter="url(#glow)">
         RAIL
       </text>
 
