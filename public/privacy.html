@@ -39,37 +39,51 @@
   </div>
 
   <h2>1. What we collect</h2>
-  <p>[List actual data collected, for example:]</p>
   <ul>
-    <li>Device motion/sensor data (accelerometer/gyroscope) used locally to detect flips and catches. [State whether this data ever leaves the device.]</li>
-    <li>Gameplay data such as scores and trick history, [stored locally / stored on our servers].</li>
+    <li>Device Motion and Sensor Data: The app requires access to your device's accelerometer and gyroscope to detect physical movements, flips, and catches during gameplay. This raw sensor data is processed entirely locally on your device in real-time. It is never exported, transmitted to our servers, or shared with third parties.</li>
+    <li>Gameplay and Account Data: While the raw motion data stays on your device, the resulting gameplay statistics (such as specific tricks landed, tricks failed, scores, and session history) are transmitted and stored securely on our backend servers (hosted by Google Firebase Cloud Firestore). This allows you to track your progress and participate in multiplayer modes.</li>
     <li>Purchase information processed by Google Play (CatchSkate does not directly receive your payment card details).</li>
-    <li>[Any analytics or crash reporting tools, e.g., Firebase Crashlytics, and what they collect.]</li>
+    <li>Analytics and Crash Reporting: We use Google Firebase (including Firebase Crashlytics and Google Analytics for Firebase) to monitor app performance and improve the user experience. These third-party services automatically collect diagnostic data, such as crash stack traces, device state information, unique device identifiers, device metadata (like OS version and model), and app lifecycle events (like session lengths). Firebase may also collect device identifiers (such as the Android Advertising ID) and derive coarse location from masked IP addresses. All user data collected by the Firebase SDKs is encrypted in transit using the Transport Layer Security (TLS) protocol.</li>
   </ul>
 
   <h2>2. What we don't collect</h2>
-  <p>CatchSkate does not access your contacts, camera, microphone, location, or photos. [Edit to match reality — remove any line that isn't true.]</p>
+  <p>Catch Skate is built for skateboarding, not surveillance. This is a completely non-algorithmic experience designed solely for you to play the game. We do not track your behavior, and we explicitly do not access, collect, or share the following:</p>
+   <ul>
+    <li>Personal Files & Media: We do not have access to your contacts, camera, or photo library.</li>
+    <li>Microphone Data: We do not access your microphone or listen to your environment.</li>
+    <li>Location Tracking: We do not request or track your GPS or physical location.</li>
+    <li>Web & App History: We do not monitor the websites you visit or see what other apps you have installed on your phone.</li>
+    <li>Biometrics: We do not use eye-tracking, facial recognition, or any biometric monitoring while the app is open.</li>
+  </ul>
+  <p>Simply put: we do not want your personal data. We just want you to play the game.</p>
+
 
   <h2>3. How we use data</h2>
   <p>Data collected is used solely to operate the App's core gameplay (motion detection and scoring), improve stability, and process your one-time purchase through Google Play. We do not sell your personal data.</p>
 
   <h2>4. Third parties</h2>
-  <p>[List any third-party services the app uses, e.g., Google Play Billing for payment processing, Firebase for crash reporting. Link to their privacy policies.]</p>
+  <p>We will never sell, rent, or trade your personal data to advertisers, data brokers, or anyone else. We only share the minimum necessary data with trusted third-party services that are strictly required to make the game function safely and smoothly.</p>
+  <p>Catch Skate relies on the following services:</p>
+  <ul>
+    <li>Google Play Billing: All in-app purchases are securely processed by Google Play. Catch Skate does not collect, process, or have access to your credit card details, billing address, or financial information.</li>
+    <li>Google Firebase: We use Firebase (a suite of backend services provided by Google) to host our database, authenticate users, and collect crash reports. As detailed in Section 1, Firebase securely stores your gameplay statistics (like your saved tricks and scores) and collects basic diagnostic data so we can fix bugs and improve the game.</li>
+  </ul>
 
   <h2>5. Data retention</h2>
-  <p>[State how long data is kept, e.g., "Gameplay data stored locally remains on your device until you uninstall the App or clear its data."]</p>
+  <p>Data Retention:  We retain your gameplay and account data only for as long as you maintain an active account with Catch Skate. This ensures you can continuously track your progression, access your trick history, and participate in the game.</p>
+  <p>Data Deletion:  You own your data. If you decide you no longer want to play Catch Skate, you have the right to delete your account and all associated data at any time. When you initiate an account deletion, your profile, trick history, scores, and leaderboard entries will be permanently deleted from our active servers.</p>
 
   <h2>6. Children's privacy</h2>
-  <p>CatchSkate is not directed at children under 13. We do not knowingly collect personal information from children under 13. [If your app is directed at children, you have additional obligations under COPPA — consult an attorney.]</p>
+  <p>CatchSkate is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
 
   <h2>7. Your choices</h2>
-  <p>You can uninstall the App at any time to remove any locally stored data. [If you store data on a server, describe how a user can request deletion.]</p>
+  <p>You can uninstall the App at any time to remove any locally stored data. Press "Options" then "Delete Account" </p>
 
   <h2>8. Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above.</p>
 
   <h2>9. Contact</h2>
-  <p>Questions about this policy: <a href="mailto:contact@catchskate.com">contact@catchskate.com</a></p>
+  <p>Questions about this policy: <a href="mailto:catchaskateapp@gmail.com">catchaskateapp@gmail.com</a></p>
 </div>
 </body>
 </html>
