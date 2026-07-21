@@ -80,8 +80,8 @@ export const socials = [
 ];
 
 export const contact = {
-  email: "catchskateapp@gmail.com",
-  phone: "Coming soon",
+  email: "catchdev@catchskate.com",
+  phone: "(714) 251-6257",
   address: {
     city: "San Diego",
     state: "CA",
@@ -92,4 +92,5 @@ export const contact = {
 export const legalLinks = {
   terms: "/terms.html",
   privacy: "/privacy.html",
+  deleteAccount: "/delete-account",
 };

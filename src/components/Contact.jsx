@@ -17,7 +17,9 @@ export default function Contact() {
             </div>
             <div>
               <dt>Phone</dt>
-              <dd>{contact.phone}</dd>
+              <dd>
+                <a href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}>{contact.phone}</a>
+              </dd>
             </div>
             <div>
               <dt>Location</dt>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { appInfo, legalLinks } from "../data.js";
 
 export default function Footer() {
@@ -7,13 +8,14 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__brand">
-          <img src="/logo.png" alt="" width="24" height="24" />
+          <img src="/logo.png" alt="" className="site-footer__logo-img" />
           <span>{appInfo.name}</span>
         </div>
 
         <nav className="site-footer__legal" aria-label="Legal">
           <a href={legalLinks.terms}>Terms of Use</a>
           <a href={legalLinks.privacy}>Privacy Policy</a>
+          <Link to={legalLinks.deleteAccount}>Delete Account</Link>
         </nav>
 
         <p className="site-footer__copy">
@@ -40,8 +42,9 @@ export default function Footer() {
           font-size: 14px;
           text-transform: uppercase;
         }
-        .site-footer__brand img {
-          border-radius: 6px;
+        .site-footer__logo-img {
+          height: 22px;
+          width: auto;
         }
         .site-footer__legal {
           display: flex;
